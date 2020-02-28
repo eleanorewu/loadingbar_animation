@@ -7,7 +7,6 @@ body{
     height: 100vh;
     overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 .loading{
     position: fixed;
@@ -15,7 +14,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #FFF;
+    background: #9ab9bc;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,9 +36,6 @@ body{
     }
 }
 
-.loading h2{
-    color: #000;
-}
 
 .loading .bar{
     position: relative;
@@ -47,7 +43,7 @@ body{
     height: 40px;
     background: transparent;
     margin: 0 20px;
-    border: solid 2px #000;
+    border: solid 2px #fff;
     box-sizing: border-box;
 }
 .loading .bar::before{
@@ -57,7 +53,8 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #000;
+    /* 進度條在跑的顏色 */
+    background: #507072;
     transform-origin: left;
     animation: animate 10s linear forwards;
 }
@@ -90,20 +87,6 @@ body{
     line-height: 36px;
     color: #fff;
     font-size: 20px;
-    mix-blend-mode: difference;
-
-
+    /* mix-blend-mode: difference; */
+    
 }
-/* 
-.center{
-    position: relative;
-    background: #000;
-    height: 100px;
-    margin: -30px 0;
-    z-index: 2;
-    transform: skewY(-5deg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-} */
