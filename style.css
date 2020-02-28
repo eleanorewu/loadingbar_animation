@@ -17,7 +17,82 @@ body{
     height: 100%;
     background: #FFF;
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+    animation: fadeout 11s linear forwards;
+}
+
+@keyframes fadeout
+{
+    0%,91%
+    {
+        opacity: 1;
+        visibility: visible;
+    }
+    100%
+    {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.loading h2{
+    color: #000;
+}
+
+.loading .bar{
+    position: relative;
+    width: 400px;
+    height: 40px;
+    background: transparent;
+    margin: 0 20px;
+    border: solid 2px #000;
+    box-sizing: border-box;
+}
+.loading .bar::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    transform-origin: left;
+    animation: animate 10s linear forwards;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: scaleX(0)
+    }
+    100%
+    {
+        transform: scaleX(1)
+    }
+}
+
+
+
+.loading .bar::after{
+    content: 'loading...';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 800;
+    letter-spacing: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 36px;
+    color: #fff;
+    font-size: 20px;
+    mix-blend-mode: difference;
+
+
 }
 /* 
 .center{
